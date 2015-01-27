@@ -66,10 +66,10 @@ bool Option::set_desc_meta(const char *s)
 }
 
 
-anyarg::anyarg(): prog_name_(), argc_(0), argv_(), options_(), help_() {}
+Anyarg::Anyarg(): prog_name_(), argc_(0), argv_(), options_(), help_() {}
 
 
-int anyarg::get_optind(const char *name) const
+int Anyarg::get_optind(const char *name) const
 {
 	if (name == NULL || name[0] == 0) {
 		fprintf(stderr, "invalid option name\n");
@@ -84,7 +84,7 @@ int anyarg::get_optind(const char *name) const
 }
 
 
-int anyarg::get_optind(char letter) const
+int Anyarg::get_optind(char letter) const
 {
 	if (letter == 0) {
 		fprintf(stderr, "invalid option\n");
@@ -98,7 +98,7 @@ int anyarg::get_optind(char letter) const
 }
 
 
-bool anyarg::is_new_option(const char *name, char letter)
+bool Anyarg::is_new_option(const char *name, char letter)
 {
 	if ((name == NULL || name[0] == 0) && letter == 0) {
 		fprintf(stderr, "%s line %d: invalid option\n", __FILE__, __LINE__);
@@ -129,7 +129,7 @@ bool anyarg::is_new_option(const char *name, char letter)
 }
 
 
-bool anyarg::add_flag(const char *name, char letter, const char *desc)
+bool Anyarg::add_flag(const char *name, char letter, const char *desc)
 {
 	assert(is_new_option(name, letter));
 
@@ -146,13 +146,13 @@ bool anyarg::add_flag(const char *name, char letter, const char *desc)
 }
 
 
-bool anyarg::add_flag(char letter, const char *desc)
+bool Anyarg::add_flag(char letter, const char *desc)
 {
 	return add_flag("", letter, desc);
 }
 
 
-bool anyarg::add_option_str(const char *name, char letter, const char *v0, const char *desc)
+bool Anyarg::add_option_str(const char *name, char letter, const char *v0, const char *desc)
 {
 	assert(is_new_option(name, letter));
 
@@ -169,13 +169,13 @@ bool anyarg::add_option_str(const char *name, char letter, const char *v0, const
 }
 
 
-bool anyarg::add_option_str(char letter, const char *v0, const char *desc)
+bool Anyarg::add_option_str(char letter, const char *v0, const char *desc)
 {
 	return add_option_str("", letter, v0, desc);
 }
 
 
-bool anyarg::add_option_int(const char *name, char letter, int v0, const char *desc)
+bool Anyarg::add_option_int(const char *name, char letter, int v0, const char *desc)
 {
 	assert(is_new_option(name, letter));
 
@@ -192,13 +192,13 @@ bool anyarg::add_option_int(const char *name, char letter, int v0, const char *d
 }
 
 
-bool anyarg::add_option_int(char letter, int v0, const char *desc)
+bool Anyarg::add_option_int(char letter, int v0, const char *desc)
 {
 	return add_option_int("", letter, v0, desc);
 }
 
 
-bool anyarg::add_option_double(const char *name, char letter, double v0, const char *desc)
+bool Anyarg::add_option_double(const char *name, char letter, double v0, const char *desc)
 {
 	assert(is_new_option(name, letter));
 
@@ -215,7 +215,7 @@ bool anyarg::add_option_double(const char *name, char letter, double v0, const c
 }
 
 
-bool anyarg::add_option_double(char letter, double v0, const char *desc)
+bool Anyarg::add_option_double(char letter, double v0, const char *desc)
 {
 	return add_option_double("", letter, v0, desc);
 }
@@ -224,7 +224,7 @@ bool anyarg::add_option_double(char letter, double v0, const char *desc)
 // Turn on flags specified on command line
 // Get option values specified on command line
 // Collect non-option arguments
-bool anyarg::parse_argv(int argc, char **argv)
+bool Anyarg::parse_argv(int argc, char **argv)
 {
 	prog_name_ = argv[0];
 	
@@ -346,7 +346,7 @@ bool anyarg::parse_argv(int argc, char **argv)
 }
 
 
-bool anyarg::found_flag(const char *name) const
+bool Anyarg::found_flag(const char *name) const
 {
 	int j = get_optind(name);
 
@@ -363,7 +363,7 @@ bool anyarg::found_flag(const char *name) const
 }
 
 
-bool anyarg::found_flag(char letter) const
+bool Anyarg::found_flag(char letter) const
 {
 	int j = get_optind(letter);
 
@@ -381,7 +381,7 @@ bool anyarg::found_flag(char letter) const
 }
 
 
-const char *anyarg::get_value_str(const char *name) const
+const char *Anyarg::get_value_str(const char *name) const
 {
 	int j = get_optind(name);
 
@@ -397,7 +397,7 @@ const char *anyarg::get_value_str(const char *name) const
 }
 
 
-const char *anyarg::get_value_str(char letter) const
+const char *Anyarg::get_value_str(char letter) const
 {
 	int j = get_optind(letter);
 
@@ -414,7 +414,7 @@ const char *anyarg::get_value_str(char letter) const
 }
 
 
-int anyarg::get_value_int(const char *name) const
+int Anyarg::get_value_int(const char *name) const
 {
 	int j = get_optind(name);
 
@@ -430,7 +430,7 @@ int anyarg::get_value_int(const char *name) const
 }
 
 
-int anyarg::get_value_int(char letter) const
+int Anyarg::get_value_int(char letter) const
 {
 	int j = get_optind(letter);
 
@@ -447,7 +447,7 @@ int anyarg::get_value_int(char letter) const
 }
 
 
-double anyarg::get_value_double(const char *name) const
+double Anyarg::get_value_double(const char *name) const
 {
 	int j = get_optind(name);
 
@@ -463,7 +463,7 @@ double anyarg::get_value_double(const char *name) const
 }
 
 
-double anyarg::get_value_double(char letter) const
+double Anyarg::get_value_double(char letter) const
 {
 	int j = get_optind(letter);
 
@@ -480,10 +480,10 @@ double anyarg::get_value_double(char letter) const
 }
 
 
-int anyarg::get_argc() const {return argc_;}
+int Anyarg::get_argc() const {return argc_;}
 
 
-const char *anyarg::get_arg(int i) const
+const char *Anyarg::get_arg(int i) const
 {
 	if (i < 0 || i >= argc_) {
 		fprintf(stderr, "option index is out-of-range\n");
@@ -494,7 +494,7 @@ const char *anyarg::get_arg(int i) const
 
 //  -S, --buffer-size=SIZE    use
 
-const char *anyarg::auto_usage()
+const char *Anyarg::auto_usage()
 {
 	int nindent = 28;
 		  	  
@@ -542,7 +542,7 @@ const char *anyarg::auto_usage()
 }
 
 
-void anyarg::show_options() const
+void Anyarg::show_options() const
 {
 	printf("Options (letter, long-name, type, value, META, desc):\n");
 	for (int i = 0; i < options_.size(); i++) {

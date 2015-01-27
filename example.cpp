@@ -3,8 +3,8 @@
 
 int main(int argc, char **argv)
 {
-	// create a anyarg object first
-	anyarg opt;
+	// create a Anyarg object first
+	Anyarg opt;
 	
 	// define usable options for this program, also set default values
 	opt.add_flag("all", 'a', "List all stuffs.");

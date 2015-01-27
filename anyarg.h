@@ -1,12 +1,12 @@
 /**
-@file    anyarg.h
+@file    Anyarg.h
 @brief   A light and powerful option parser for C++.
 @author  Li Qibin (liqb036@gmail.com)
 @version 0.11
 @bug     no bug found yet
 @date    2014/01/26
 
-anyarg supports both single letter-options (like: -i) and long options (like: --help).
+Anyarg supports both single letter-options (like: -i) and long options (like: --help).
 
 The mixup of short and long options in command line is allowed (like: -v --help).
 
@@ -94,11 +94,11 @@ struct Option
 
 
 /// Use this class to define program options and parse command line arguments.
-class anyarg
+class Anyarg
 {
   public:
-	/// Construct a anyarg object.
-	anyarg();
+	/// Construct a Anyarg object.
+	Anyarg();
 
 	//@{
 	/**
@@ -114,7 +114,7 @@ class anyarg
 	opt.add_flag("help", 'h', "Display help information.");
 	opt.add_flag('v', "Open the verbose mode.");
 	\endverbatim
-	opt is a anyarg object.
+	opt is a Anyarg object.
 	*/
 	bool add_flag(const char *name, char letter, const char *desc);
 	bool add_flag(char letter, const char *desc);
@@ -226,9 +226,9 @@ class anyarg
 	
 	string help_;     // formatted help for options
 
-	anyarg(const anyarg &); // prevent the copy of a anyarg object
+	Anyarg(const Anyarg &); // prevent the copy of a anyarg object
 
-	anyarg & operator = (const anyarg &); // prevent assignment of anyarg object
+	Anyarg & operator = (const Anyarg &); // prevent assignment of anyarg object
 	
 	bool is_new_option(const char *name, char letter);
 
@@ -246,7 +246,7 @@ class anyarg
 \code
 int main(int argc, char **argv)
 {
-	anyarg opt;
+	Anyarg opt;
 	opt.add_flag("all", 'a', "List all stuffs.");
 	opt.add_option_str("input-file", 'i', "-", "=FILE Input filename, default is -.");
 	opt.add_option_int("buffer-size", 'b', 100, "=SIZE Set the buffer size, default is 100.");
