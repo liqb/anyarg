@@ -4,20 +4,17 @@ anyarg - a simple option parser for C++
 Current version: 0.11
 
 ### Summary
-
 *anyarg* supports both single letter options (like: -i) and long options (like: --help). The parsing of single letter options follows POSIX conventions and the parsing of long options follows GNU conventions (See URLs).
 
 The mixup of short and long options in command line is allowed (like: -v --help).
 
-The mixup of options and non-option arguments also is allowed, but it is a good practice to place options before non-option
-arguments in the writing of command line.
+The mixup of options and non-option arguments also is allowed, but it is a good practice to place options before non-option arguments in command line.
 
-All non-option arugments are collected in a new array with the same order as they in the command line.
+All non-option arugments are collected with the same order as they in the command line.
 
 Argument -- stops the parsing of command line arguments. All the following arguments are treated as non-option arguments.
 
-A single hypen - is parsed as an ordinary non-option arguments. It is usally used to specify input from standard input or
-output to the standant output. 
+A single hypen - is parsed as an ordinary non-option arguments. It is usally used to specify input from standard input or output to the standant output. 
 
 
 ### Code example
@@ -65,11 +62,9 @@ int main(int argc, char **argv)
 ### Motivation
 Writting code to parsing command line options and formatted usage is non-trival, always is annoying and time wasting. 
 
-*anyary* attempts to make option parsing much easier in C++ programming. It also can generate well formatted usage
-information for all options, readlly saving a lot of our life.
+*anyary* attempts to make option parsing much easier in C++ programming. It also can generate well formatted usage information for all options, really saving a lot of our life.
 
 The formmatted usage is like this:
-
 ```
 Options
   -a, --all                 List all stuffs.
