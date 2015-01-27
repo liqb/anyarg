@@ -1,0 +1,42 @@
+\hypertarget{_2_users_2liqb_2dev_2anyarg_2anyarg_8h-example}{\section{/\-Users/liqb/dev/anyarg/anyarg.\-h}
+}
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} \hyperlink{example_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} **argv)
+\{
+    \hyperlink{class_anyarg}{Anyarg} opt;
+    opt.\hyperlink{class_anyarg_a15625aae27eac8deb3b8b6fd1adf70c4}{add\_flag}(\textcolor{stringliteral}{"all"}, \textcolor{charliteral}{'a'}, \textcolor{stringliteral}{"List all stuffs."});
+    opt.\hyperlink{class_anyarg_ad97ec66af7ef981b51baa6d16655f3f2}{add\_option\_str}(\textcolor{stringliteral}{"input-file"}, \textcolor{charliteral}{'i'}, \textcolor{stringliteral}{"-"}, \textcolor{stringliteral}{"=FILE Input
+       filename, default is -."});
+    opt.\hyperlink{class_anyarg_a8bf10dd45f72141ac538bc36d8c90e3e}{add\_option\_int}(\textcolor{stringliteral}{"buffer-size"}, \textcolor{charliteral}{'b'}, 100, \textcolor{stringliteral}{"=SIZE Set the
+       buffer size, default is 100."});
+    opt.\hyperlink{class_anyarg_a616fa92a586900e277bfc6222428f544}{add\_option\_double}(\textcolor{stringliteral}{"min"}, 0, 0.9, \textcolor{stringliteral}{"=FLOAT Minimal
+       correlation coefficient, default is 0.9."});
+    opt.\hyperlink{class_anyarg_a15625aae27eac8deb3b8b6fd1adf70c4}{add\_flag}(\textcolor{charliteral}{'v'}, \textcolor{stringliteral}{"Open verbose model."});
+    opt.\hyperlink{class_anyarg_a15625aae27eac8deb3b8b6fd1adf70c4}{add\_flag}(\textcolor{stringliteral}{"help"}, \textcolor{charliteral}{'h'}, \textcolor{stringliteral}{"Display help information."});
+
+    opt.\hyperlink{class_anyarg_ab38a13c5d241224bb14d8e474bbe70de}{parse\_argv}(argc, argv);
+        
+    \textcolor{keywordflow}{if} (opt.\hyperlink{class_anyarg_a1305e8be180c7247cb9bdb0994b00597}{found\_flag}(\textcolor{stringliteral}{"help"})) \{
+        printf(\textcolor{stringliteral}{"%s\(\backslash\)n"}, opt.\hyperlink{class_anyarg_a1dd740c033f8ff539dc2c6f4001e11f9}{auto\_usage}());
+        exit(0);
+    \}
+    
+    \textcolor{keywordflow}{if} (opt.\hyperlink{class_anyarg_a1305e8be180c7247cb9bdb0994b00597}{found\_flag}(\textcolor{stringliteral}{"all"}))
+        printf(\textcolor{stringliteral}{"option --all is set in the command line\(\backslash\)n"});
+    \textcolor{keywordflow}{if} (opt.\hyperlink{class_anyarg_a1305e8be180c7247cb9bdb0994b00597}{found\_flag}(\textcolor{charliteral}{'v'}))
+        printf(\textcolor{stringliteral}{"verbose mode is opened\(\backslash\)n"});
+    printf(\textcolor{stringliteral}{"The value of option -b is %d\(\backslash\)n"}, opt.\hyperlink{class_anyarg_ae254a7571efbf058ad98fcd00a176470}{get\_value\_int}(\textcolor{stringliteral}{"
+      buffer-size"}));
+    printf(\textcolor{stringliteral}{"The value of option --min is %f\(\backslash\)n"}, opt.\hyperlink{class_anyarg_a8d46bd713bb7bc5bd303e23afd5609d1}{get\_value\_double}
+      (\textcolor{stringliteral}{"min"}));
+
+    \textcolor{keywordflow}{return} 1;
+\}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ 

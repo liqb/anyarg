@@ -1,6 +1,6 @@
 /**
-@file    Anyarg.h
-@brief   A light and powerful option parser for C++.
+@file    anyarg.h
+@brief   A simple option parser for C++.
 @author  Li Qibin (liqb036@gmail.com)
 @version 0.11
 @bug     no bug found yet
@@ -100,7 +100,6 @@ class Anyarg
 	/// Construct a Anyarg object.
 	Anyarg();
 
-	//@{
 	/**
 	Add a boolean flag to a program.
 	@param name   Long name of a flag. Using hypen to connect multiple words, such as "buffer-size".
@@ -118,7 +117,6 @@ class Anyarg
 	*/
 	bool add_flag(const char *name, char letter, const char *desc);
 	bool add_flag(char letter, const char *desc);
-	//@}
 
 
 	/**

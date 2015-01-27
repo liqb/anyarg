@@ -1,0 +1,55 @@
+\hypertarget{anyarg_8h}{\section{anyarg.\-h File Reference}
+\label{anyarg_8h}\index{anyarg.\-h@{anyarg.\-h}}
+}
+
+
+A simple option parser for C++.  
+
+
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$cstring$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_option}{Option}
+\begin{DoxyCompactList}\small\item\em Data structure of a program option. \end{DoxyCompactList}\item 
+class \hyperlink{class_anyarg}{Anyarg}
+\begin{DoxyCompactList}\small\item\em Use this class to define program options and parse command line arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A simple option parser for C++. \begin{DoxyAuthor}{Author}
+Li Qibin (\href{mailto:liqb036@gmail.com}{\tt liqb036@gmail.\-com}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\-11 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000001}{Bug}]no bug found yet \end{DoxyRefDesc}
+\begin{DoxyDate}{Date}
+2014/01/26
+\end{DoxyDate}
+\hyperlink{class_anyarg}{Anyarg} supports both single letter-\/options (like\-: -\/i) and long options (like\-: --help).
+
+The mixup of short and long options in command line is allowed (like\-: -\/v --help).
+
+Options can be given as\-: \begin{DoxyVerb}--help
+--long=value
+--long value
+-h
+-ab
+-c value
+\end{DoxyVerb}
+ where --help, -\/h, -\/a, -\/b are boolean flags, option --long and -\/c take an argument.
+
+Although options can mix up with non-\/option arguments, it is a good practice to place options before non-\/option arguments.
+
+All non-\/option arugments are collected to a new array in the same order as they are in command line.
+
+Argument -- stops the parsing of command line arguments. All the following arguments are treated as non-\/option arguments.
+
+A single hypen -\/ is parsed as an ordinary non-\/option arguments. It is usally used to specify input from standard input or output to the standant output.
+
+Assign multiple values to an option is not allowed. 
