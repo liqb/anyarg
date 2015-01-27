@@ -2,7 +2,7 @@
 @file    anyarg.h
 @brief   A light and powerful option parser for C++.
 @author  Li Qibin (liqb036@gmail.com)
-@version 0.10
+@version 0.11
 @bug     no bug found yet
 @date    2014/01/26
 
@@ -63,8 +63,9 @@ http://www.gnu.org/prep/standards/html_node/Command_002dLine-Interfaces.html
 #define __ANYARG_H__
 
 #include <string>
-#include <stdlib.h>
-#include <string.h>
+#include <vector>
+#include <cstdlib>
+#include <cstring>
 
 using std::string;
 using std::vector;
@@ -243,21 +244,18 @@ class anyarg
 /**
 \example
 \code
-#include "anyarg.h"
-
 int main(int argc, char **argv)
 {
 	anyarg opt;
-	opt.add_flag("all", 'a', "List all.");
+	opt.add_flag("all", 'a', "List all stuffs.");
+	opt.add_option_str("input-file", 'i', "-", "=FILE Input filename, default is -.");
+	opt.add_option_int("buffer-size", 'b', 100, "=SIZE Set the buffer size, default is 100.");
+	opt.add_option_double("min", 0, 0.9, "=FLOAT Minimal correlation coefficient, default is 0.9.");
 	opt.add_flag('v', "Open verbose model.");
 	opt.add_flag("help", 'h', "Display help information.");
-	opt.add_option_str("input-file", 'i', "-", "=FILE Input file name.");
-	opt.add_option_int("buffer-size", 'b', 100, "=SIZE Set the buffer size.");
-	opt.add_option_double("min", 0, 0.1, "=FLOAT Minimal identity.");
+
 	opt.parse_argv(argc, argv);
-	
-//	printf("%s", opt.auto_usage());
-	
+		
 	if (opt.found_flag("help")) {
 		printf("%s\n", opt.auto_usage());
 		exit(0);
@@ -269,6 +267,7 @@ int main(int argc, char **argv)
 		printf("verbose mode is opened\n");
 	printf("The value of option -b is %d\n", opt.get_value_int("buffer-size"));
 	printf("The value of option --min is %f\n", opt.get_value_double("min"));
+
 	return 1;
 }
 \endcode
