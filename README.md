@@ -1,10 +1,10 @@
-anyarg - a simple option parser for C++ 
+Anyarg - a simple option parser for C++ 
 =======================================
 
 Current version: 0.11
 
 ### Summary
-*anyarg* supports both single letter options (like: -i) and long options (like: --help). The parsing of single letter options follows POSIX conventions and the parsing of long options follows GNU conventions (See URLs).
+*Anyarg* supports both single letter options (like: -i) and long options (like: --help). The parsing of single letter options follows POSIX conventions and the parsing of long options follows GNU conventions (See URLs).
 
 The mixup of short and long options in command line is allowed (like: -v --help).
 
@@ -24,8 +24,8 @@ A single hypen - is parsed as an ordinary non-option arguments. It is usally use
 
 int main(int argc, char **argv)
 {
-	// create a anyarg object first
-	anyarg opt;
+	// create a Anyarg object first
+	Anyarg opt;
 	
 	// define usable options for this program, also set default values
 	opt.add_flag("all", 'a', "List all stuffs.");
@@ -90,7 +90,7 @@ http://www.gnu.org/prep/standards/html_node/Command_002dLine-Interfaces.html
 ### Contributors
 Li Qibin liqb036@gamil.com
 
-Please contact if you have ideas to improve *anyarg* or report a bug.
+Please contact if you have ideas to improve *Anyarg* or report a bug.
 
 
 ### License
