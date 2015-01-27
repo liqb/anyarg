@@ -83,8 +83,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a name="_a1"></a><a class="code" href="class_anyarg.html" title="Use this class to define program options and parse command line arguments.">Anyarg</a> opt;</div>
 <div class="line">    opt.<a name="a2"></a><a class="code" href="class_anyarg.html#a15625aae27eac8deb3b8b6fd1adf70c4" title="Add a boolean flag to a program.">add_flag</a>(<span class="stringliteral">&quot;all&quot;</span>, <span class="charliteral">&#39;a&#39;</span>, <span class="stringliteral">&quot;List all stuffs.&quot;</span>);</div>
 <div class="line">    opt.<a name="a3"></a><a class="code" href="class_anyarg.html#ad97ec66af7ef981b51baa6d16655f3f2" title="Add a taking-value option to a program.">add_option_str</a>(<span class="stringliteral">&quot;input-file&quot;</span>, <span class="charliteral">&#39;i&#39;</span>, <span class="stringliteral">&quot;-&quot;</span>, <span class="stringliteral">&quot;=FILE Input filename, default is -.&quot;</span>);</div>
-<div class="line">    opt.<a name="a4"></a><a class="code" href="class_anyarg.html#a8bf10dd45f72141ac538bc36d8c90e3e">add_option_int</a>(<span class="stringliteral">&quot;buffer-size&quot;</span>, <span class="charliteral">&#39;b&#39;</span>, 100, <span class="stringliteral">&quot;=SIZE Set the buffer size, default is 100.&quot;</span>);</div>
-<div class="line">    opt.<a name="a5"></a><a class="code" href="class_anyarg.html#a616fa92a586900e277bfc6222428f544">add_option_double</a>(<span class="stringliteral">&quot;min&quot;</span>, 0, 0.9, <span class="stringliteral">&quot;=FLOAT Minimal correlation coefficient, default is 0.9.&quot;</span>);</div>
+<div class="line">    opt.<a name="a4"></a><a class="code" href="class_anyarg.html#a8bf10dd45f72141ac538bc36d8c90e3e" title="Add a taking-value option to a program.">add_option_int</a>(<span class="stringliteral">&quot;buffer-size&quot;</span>, <span class="charliteral">&#39;b&#39;</span>, 100, <span class="stringliteral">&quot;=SIZE Set the buffer size, default is 100.&quot;</span>);</div>
+<div class="line">    opt.<a name="a5"></a><a class="code" href="class_anyarg.html#a616fa92a586900e277bfc6222428f544" title="Add a taking-value option to a program.">add_option_double</a>(<span class="stringliteral">&quot;min&quot;</span>, 0, 0.9, <span class="stringliteral">&quot;=FLOAT Minimal correlation coefficient, default is 0.9.&quot;</span>);</div>
 <div class="line">    opt.<a class="code" href="class_anyarg.html#a15625aae27eac8deb3b8b6fd1adf70c4" title="Add a boolean flag to a program.">add_flag</a>(<span class="charliteral">&#39;v&#39;</span>, <span class="stringliteral">&quot;Open verbose model.&quot;</span>);</div>
 <div class="line">    opt.<a class="code" href="class_anyarg.html#a15625aae27eac8deb3b8b6fd1adf70c4" title="Add a boolean flag to a program.">add_flag</a>(<span class="stringliteral">&quot;help&quot;</span>, <span class="charliteral">&#39;h&#39;</span>, <span class="stringliteral">&quot;Display help information.&quot;</span>);</div>
 <div class="line"></div>
@@ -99,15 +99,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">        printf(<span class="stringliteral">&quot;option --all is set in the command line\n&quot;</span>);</div>
 <div class="line">    <span class="keywordflow">if</span> (opt.<a class="code" href="class_anyarg.html#a1305e8be180c7247cb9bdb0994b00597" title="Check whether a flag can be found in the command line.">found_flag</a>(<span class="charliteral">&#39;v&#39;</span>))</div>
 <div class="line">        printf(<span class="stringliteral">&quot;verbose mode is opened\n&quot;</span>);</div>
-<div class="line">    printf(<span class="stringliteral">&quot;The value of option -b is %d\n&quot;</span>, opt.<a name="a9"></a><a class="code" href="class_anyarg.html#ae254a7571efbf058ad98fcd00a176470">get_value_int</a>(<span class="stringliteral">&quot;buffer-size&quot;</span>));</div>
-<div class="line">    printf(<span class="stringliteral">&quot;The value of option --min is %f\n&quot;</span>, opt.<a name="a10"></a><a class="code" href="class_anyarg.html#a8d46bd713bb7bc5bd303e23afd5609d1">get_value_double</a>(<span class="stringliteral">&quot;min&quot;</span>));</div>
+<div class="line">    printf(<span class="stringliteral">&quot;The value of option -b is %d\n&quot;</span>, opt.<a name="a9"></a><a class="code" href="class_anyarg.html#ae254a7571efbf058ad98fcd00a176470" title="Get the value of an option.">get_value_int</a>(<span class="stringliteral">&quot;buffer-size&quot;</span>));</div>
+<div class="line">    printf(<span class="stringliteral">&quot;The value of option --min is %f\n&quot;</span>, opt.<a name="a10"></a><a class="code" href="class_anyarg.html#a8d46bd713bb7bc5bd303e23afd5609d1" title="Get the value of an option.">get_value_double</a>(<span class="stringliteral">&quot;min&quot;</span>));</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> 1;</div>
 <div class="line">}</div>
 </div><!-- fragment --><div class="fragment"></div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 27 2015 17:35:10 for anyarg by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 27 2015 17:51:37 for anyarg by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

@@ -15,46 +15,62 @@ Use this class to define program options and parse command line arguments.
 \item 
 \hyperlink{class_anyarg_a6d4bbf6e762e77d89ffa7756359b6a62}{Anyarg} ()
 \begin{DoxyCompactList}\small\item\em Construct a \hyperlink{class_anyarg}{Anyarg} object. \end{DoxyCompactList}\item 
-bool \hyperlink{class_anyarg_a15625aae27eac8deb3b8b6fd1adf70c4}{add\-\_\-flag} (const char $\ast$name, char letter, const char $\ast$desc)
-\begin{DoxyCompactList}\small\item\em Add a boolean flag to a program. \end{DoxyCompactList}\item 
-bool \hyperlink{class_anyarg_ab3d325be34ce29d29d890e240b3f592b}{add\-\_\-flag} (char letter, const char $\ast$desc)
-\item 
-bool \hyperlink{class_anyarg_ad97ec66af7ef981b51baa6d16655f3f2}{add\-\_\-option\-\_\-str} (const char $\ast$name, char letter, const char $\ast$v0, const char $\ast$desc)
-\begin{DoxyCompactList}\small\item\em Add a taking-\/value option to a program. \end{DoxyCompactList}\item 
-bool \hyperlink{class_anyarg_a910a657d64f414ae3a97f1e2c88ff22c}{add\-\_\-option\-\_\-str} (char letter, const char $\ast$v0, const char $\ast$desc)
-\item 
-bool \hyperlink{class_anyarg_a8bf10dd45f72141ac538bc36d8c90e3e}{add\-\_\-option\-\_\-int} (char letter, int v0, const char $\ast$desc)
-\item 
-bool \hyperlink{class_anyarg_ad4202a063412042e9bcde266b78df741}{add\-\_\-option\-\_\-int} (const char $\ast$name, char letter, int v0, const char $\ast$desc)
-\item 
-bool \hyperlink{class_anyarg_a616fa92a586900e277bfc6222428f544}{add\-\_\-option\-\_\-double} (char letter, double v0, const char $\ast$desc)
-\item 
-bool \hyperlink{class_anyarg_ad5f726956b9525fce547f359bbdcddfc}{add\-\_\-option\-\_\-double} (const char $\ast$name, char letter, double v0, const char $\ast$desc)
-\item 
 bool \hyperlink{class_anyarg_ab38a13c5d241224bb14d8e474bbe70de}{parse\-\_\-argv} (int argc, char $\ast$$\ast$argv)
 \begin{DoxyCompactList}\small\item\em Parse command line arguments. \end{DoxyCompactList}\item 
-bool \hyperlink{class_anyarg_a1305e8be180c7247cb9bdb0994b00597}{found\-\_\-flag} (const char $\ast$name) const 
-\begin{DoxyCompactList}\small\item\em Check whether a flag can be found in the command line. \end{DoxyCompactList}\item 
-bool \hyperlink{class_anyarg_a8663ada26b0add34878d0929dc436fc5}{found\-\_\-flag} (char letter) const 
-\item 
-const char $\ast$ \hyperlink{class_anyarg_a9788b24659c4b7ab69cfb8b1f55f1c15}{get\-\_\-value\-\_\-str} (const char $\ast$name) const 
-\begin{DoxyCompactList}\small\item\em Get the value of an option. \end{DoxyCompactList}\item 
-const char $\ast$ \hyperlink{class_anyarg_a8b5d891a9e146c17cd4d8038c5265fcc}{get\-\_\-value\-\_\-str} (char letter) const 
-\item 
-int \hyperlink{class_anyarg_ae254a7571efbf058ad98fcd00a176470}{get\-\_\-value\-\_\-int} (const char $\ast$name) const 
-\item 
-int \hyperlink{class_anyarg_a2c45edbcd6de87992c227c3994eb7e72}{get\-\_\-value\-\_\-int} (char letter) const 
-\item 
-double \hyperlink{class_anyarg_a8d46bd713bb7bc5bd303e23afd5609d1}{get\-\_\-value\-\_\-double} (const char $\ast$name) const 
-\item 
-double \hyperlink{class_anyarg_ad607e8d76b475ff3c5a9ccb4032258d7}{get\-\_\-value\-\_\-double} (char letter) const 
-\item 
 int \hyperlink{class_anyarg_a3cffbadc85f2fd4086e9a91ac1c5d666}{get\-\_\-argc} () const 
 \begin{DoxyCompactList}\small\item\em Get the number of non-\/option arguments. \end{DoxyCompactList}\item 
 const char $\ast$ \hyperlink{class_anyarg_a98c55821efc66a45f1132ffa90689928}{get\-\_\-arg} (int i) const 
 \begin{DoxyCompactList}\small\item\em Get a non-\/option argument by index. \end{DoxyCompactList}\item 
 const char $\ast$ \hyperlink{class_anyarg_a1dd740c033f8ff539dc2c6f4001e11f9}{auto\-\_\-usage} ()
 \begin{DoxyCompactList}\small\item\em Generate well-\/formatted usage information for options defined for the program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_anyarg_a15625aae27eac8deb3b8b6fd1adf70c4}{add\-\_\-flag} (const char $\ast$name, char letter, const char $\ast$desc)
+\begin{DoxyCompactList}\small\item\em Add a boolean flag to a program. \end{DoxyCompactList}\item 
+bool \hyperlink{class_anyarg_ab3d325be34ce29d29d890e240b3f592b}{add\-\_\-flag} (char letter, const char $\ast$desc)
+\begin{DoxyCompactList}\small\item\em Add a boolean flag to a program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_anyarg_ad97ec66af7ef981b51baa6d16655f3f2}{add\-\_\-option\-\_\-str} (const char $\ast$name, char letter, const char $\ast$v0, const char $\ast$desc)
+\begin{DoxyCompactList}\small\item\em Add a taking-\/value option to a program. \end{DoxyCompactList}\item 
+bool \hyperlink{class_anyarg_a910a657d64f414ae3a97f1e2c88ff22c}{add\-\_\-option\-\_\-str} (char letter, const char $\ast$v0, const char $\ast$desc)
+\begin{DoxyCompactList}\small\item\em Add a taking-\/value option to a program. \end{DoxyCompactList}\item 
+bool \hyperlink{class_anyarg_a8bf10dd45f72141ac538bc36d8c90e3e}{add\-\_\-option\-\_\-int} (char letter, int v0, const char $\ast$desc)
+\begin{DoxyCompactList}\small\item\em Add a taking-\/value option to a program. \end{DoxyCompactList}\item 
+bool \hyperlink{class_anyarg_ad4202a063412042e9bcde266b78df741}{add\-\_\-option\-\_\-int} (const char $\ast$name, char letter, int v0, const char $\ast$desc)
+\begin{DoxyCompactList}\small\item\em Add a taking-\/value option to a program. \end{DoxyCompactList}\item 
+bool \hyperlink{class_anyarg_a616fa92a586900e277bfc6222428f544}{add\-\_\-option\-\_\-double} (char letter, double v0, const char $\ast$desc)
+\begin{DoxyCompactList}\small\item\em Add a taking-\/value option to a program. \end{DoxyCompactList}\item 
+bool \hyperlink{class_anyarg_ad5f726956b9525fce547f359bbdcddfc}{add\-\_\-option\-\_\-double} (const char $\ast$name, char letter, double v0, const char $\ast$desc)
+\begin{DoxyCompactList}\small\item\em Add a taking-\/value option to a program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_anyarg_a1305e8be180c7247cb9bdb0994b00597}{found\-\_\-flag} (const char $\ast$name) const 
+\begin{DoxyCompactList}\small\item\em Check whether a flag can be found in the command line. \end{DoxyCompactList}\item 
+bool \hyperlink{class_anyarg_a8663ada26b0add34878d0929dc436fc5}{found\-\_\-flag} (char letter) const 
+\begin{DoxyCompactList}\small\item\em Check whether a flag can be found in the command line. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{class_anyarg_a9788b24659c4b7ab69cfb8b1f55f1c15}{get\-\_\-value\-\_\-str} (const char $\ast$name) const 
+\begin{DoxyCompactList}\small\item\em Get the value of an option. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{class_anyarg_a8b5d891a9e146c17cd4d8038c5265fcc}{get\-\_\-value\-\_\-str} (char letter) const 
+\begin{DoxyCompactList}\small\item\em Get the value of an option. \end{DoxyCompactList}\item 
+int \hyperlink{class_anyarg_ae254a7571efbf058ad98fcd00a176470}{get\-\_\-value\-\_\-int} (const char $\ast$name) const 
+\begin{DoxyCompactList}\small\item\em Get the value of an option. \end{DoxyCompactList}\item 
+int \hyperlink{class_anyarg_a2c45edbcd6de87992c227c3994eb7e72}{get\-\_\-value\-\_\-int} (char letter) const 
+\begin{DoxyCompactList}\small\item\em Get the value of an option. \end{DoxyCompactList}\item 
+double \hyperlink{class_anyarg_a8d46bd713bb7bc5bd303e23afd5609d1}{get\-\_\-value\-\_\-double} (const char $\ast$name) const 
+\begin{DoxyCompactList}\small\item\em Get the value of an option. \end{DoxyCompactList}\item 
+double \hyperlink{class_anyarg_ad607e8d76b475ff3c5a9ccb4032258d7}{get\-\_\-value\-\_\-double} (char letter) const 
+\begin{DoxyCompactList}\small\item\em Get the value of an option. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
 
 
 \subsection{Detailed Description}
@@ -104,12 +120,9 @@ Add a boolean flag to a program.
 {\ttfamily true} if success, {\ttfamily false} if the flag has been defined. 
 \end{DoxyReturn}
 \begin{DoxyNote}{Note}
-The default value of flag is {\ttfamily false}.
+The default value of flag is {\ttfamily false}. 
 \end{DoxyNote}
-Examples\-: \begin{DoxyVerb}opt.add_flag("help", 'h', "Display help information.");
-opt.add_flag('v', "Open the verbose mode.");
-\end{DoxyVerb}
- opt is a \hyperlink{class_anyarg}{Anyarg} object. \begin{Desc}
+\begin{Desc}
 \item[Examples\-: ]\par
 \hyperlink{_2_users_2liqb_2dev_2anyarg_2anyarg_8h-example}{/\-Users/liqb/dev/anyarg/anyarg.\-h}.\end{Desc}
 \hypertarget{class_anyarg_ab3d325be34ce29d29d890e240b3f592b}{\index{Anyarg@{Anyarg}!add\-\_\-flag@{add\-\_\-flag}}
@@ -120,6 +133,25 @@ opt.add_flag('v', "Open the verbose mode.");
 \item[{const char $\ast$}]{desc}
 \end{DoxyParamCaption}
 )}}\label{class_anyarg_ab3d325be34ce29d29d890e240b3f592b}
+
+
+Add a boolean flag to a program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Long name of a flag. Using hypen to connect multiple words, such as \char`\"{}buffer-\/size\char`\"{}. \\
+\hline
+{\em letter} & Single-\/letter label of a flag, such as 'i'. Set letter to 0 (not '0') if you do not need a short label. \\
+\hline
+{\em desc} & Description of a flag, which will be used to generate usage. Set desc as \char`\"{}\char`\"{} if nothing to say. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if success, {\ttfamily false} if the flag has been defined. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The default value of flag is {\ttfamily false}. 
+\end{DoxyNote}
 \hypertarget{class_anyarg_ad97ec66af7ef981b51baa6d16655f3f2}{\index{Anyarg@{Anyarg}!add\-\_\-option\-\_\-str@{add\-\_\-option\-\_\-str}}
 \index{add\-\_\-option\-\_\-str@{add\-\_\-option\-\_\-str}!Anyarg@{Anyarg}}
 \subsubsection[{add\-\_\-option\-\_\-str}]{\setlength{\rightskip}{0pt plus 5cm}bool Anyarg\-::add\-\_\-option\-\_\-str (
@@ -142,16 +174,13 @@ Add a taking-\/value option to a program.
 \hline
 {\em v0} & The default value of this option. \\
 \hline
-{\em desc} & Description of a flag, which will be used to generate usage. Set {\ttfamily desc} as \char`\"{}\char`\"{} if nothing to say. If description starts with an {\ttfamily =} (like\-: \char`\"{}=\-F\-I\-L\-E Name of output file\char`\"{}), the first word is treated as a M\-E\-T\-A word in the generation of option usage, e.\-g.\-: \char`\"{}-\/f F\-I\-L\-E, \&ndash;filename=\-F\-I\-L\-E\char`\"{}. \\
+{\em desc} & Description of a flag, which will be used to generate usage. Set {\ttfamily desc} as \char`\"{}\char`\"{} if nothing to say. If description starts with an {\ttfamily =} (like\-: \char`\"{}=\-F\-I\-L\-E Name of output file\char`\"{}), the word followed will be treated as a M\-E\-T\-A word, which will be used in the generation of option usage, e.\-g.\-: \char`\"{}-\/f F\-I\-L\-E, \&ndash;filename=\-F\-I\-L\-E\char`\"{}. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-{\ttfamily true} if success, {\ttfamily false} if the flag has been defined.
+{\ttfamily true} if success, {\ttfamily false} if the flag has been defined. 
 \end{DoxyReturn}
-Examples\-: \begin{DoxyVerb}opt.add_option_int("buffer-size", 0, 100, "=SIZE Buffer size, default=100");
-opt.add_option_str("output", 'o', "na", "=FILE Output file");
-\end{DoxyVerb}
- \begin{Desc}
+\begin{Desc}
 \item[Examples\-: ]\par
 \hyperlink{_2_users_2liqb_2dev_2anyarg_2anyarg_8h-example}{/\-Users/liqb/dev/anyarg/anyarg.\-h}.\end{Desc}
 \hypertarget{class_anyarg_a910a657d64f414ae3a97f1e2c88ff22c}{\index{Anyarg@{Anyarg}!add\-\_\-option\-\_\-str@{add\-\_\-option\-\_\-str}}
@@ -163,6 +192,24 @@ opt.add_option_str("output", 'o', "na", "=FILE Output file");
 \item[{const char $\ast$}]{desc}
 \end{DoxyParamCaption}
 )}}\label{class_anyarg_a910a657d64f414ae3a97f1e2c88ff22c}
+
+
+Add a taking-\/value option to a program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Long name of a flag. Using hypen to connect multiple words, such as \char`\"{}buffer-\/size\char`\"{}. \\
+\hline
+{\em letter} & Single-\/letter label of a flag, such as 'i'. Set letter to 0 if you do not need a short label. \\
+\hline
+{\em v0} & The default value of this option. \\
+\hline
+{\em desc} & Description of a flag, which will be used to generate usage. Set {\ttfamily desc} as \char`\"{}\char`\"{} if nothing to say. If description starts with an {\ttfamily =} (like\-: \char`\"{}=\-F\-I\-L\-E Name of output file\char`\"{}), the word followed will be treated as a M\-E\-T\-A word, which will be used in the generation of option usage, e.\-g.\-: \char`\"{}-\/f F\-I\-L\-E, \&ndash;filename=\-F\-I\-L\-E\char`\"{}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if success, {\ttfamily false} if the flag has been defined. 
+\end{DoxyReturn}
 \hypertarget{class_anyarg_a8bf10dd45f72141ac538bc36d8c90e3e}{\index{Anyarg@{Anyarg}!add\-\_\-option\-\_\-int@{add\-\_\-option\-\_\-int}}
 \index{add\-\_\-option\-\_\-int@{add\-\_\-option\-\_\-int}!Anyarg@{Anyarg}}
 \subsubsection[{add\-\_\-option\-\_\-int}]{\setlength{\rightskip}{0pt plus 5cm}bool Anyarg\-::add\-\_\-option\-\_\-int (
@@ -172,6 +219,24 @@ opt.add_option_str("output", 'o', "na", "=FILE Output file");
 \item[{const char $\ast$}]{desc}
 \end{DoxyParamCaption}
 )}}\label{class_anyarg_a8bf10dd45f72141ac538bc36d8c90e3e}
+
+
+Add a taking-\/value option to a program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Long name of a flag. Using hypen to connect multiple words, such as \char`\"{}buffer-\/size\char`\"{}. \\
+\hline
+{\em letter} & Single-\/letter label of a flag, such as 'i'. Set letter to 0 if you do not need a short label. \\
+\hline
+{\em v0} & The default value of this option. \\
+\hline
+{\em desc} & Description of a flag, which will be used to generate usage. Set {\ttfamily desc} as \char`\"{}\char`\"{} if nothing to say. If description starts with an {\ttfamily =} (like\-: \char`\"{}=\-F\-I\-L\-E Name of output file\char`\"{}), the word followed will be treated as a M\-E\-T\-A word, which will be used in the generation of option usage, e.\-g.\-: \char`\"{}-\/f F\-I\-L\-E, \&ndash;filename=\-F\-I\-L\-E\char`\"{}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if success, {\ttfamily false} if the flag has been defined. 
+\end{DoxyReturn}
 \begin{Desc}
 \item[Examples\-: ]\par
 \hyperlink{_2_users_2liqb_2dev_2anyarg_2anyarg_8h-example}{/\-Users/liqb/dev/anyarg/anyarg.\-h}.\end{Desc}
@@ -185,6 +250,24 @@ opt.add_option_str("output", 'o', "na", "=FILE Output file");
 \item[{const char $\ast$}]{desc}
 \end{DoxyParamCaption}
 )}}\label{class_anyarg_ad4202a063412042e9bcde266b78df741}
+
+
+Add a taking-\/value option to a program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Long name of a flag. Using hypen to connect multiple words, such as \char`\"{}buffer-\/size\char`\"{}. \\
+\hline
+{\em letter} & Single-\/letter label of a flag, such as 'i'. Set letter to 0 if you do not need a short label. \\
+\hline
+{\em v0} & The default value of this option. \\
+\hline
+{\em desc} & Description of a flag, which will be used to generate usage. Set {\ttfamily desc} as \char`\"{}\char`\"{} if nothing to say. If description starts with an {\ttfamily =} (like\-: \char`\"{}=\-F\-I\-L\-E Name of output file\char`\"{}), the word followed will be treated as a M\-E\-T\-A word, which will be used in the generation of option usage, e.\-g.\-: \char`\"{}-\/f F\-I\-L\-E, \&ndash;filename=\-F\-I\-L\-E\char`\"{}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if success, {\ttfamily false} if the flag has been defined. 
+\end{DoxyReturn}
 \hypertarget{class_anyarg_a616fa92a586900e277bfc6222428f544}{\index{Anyarg@{Anyarg}!add\-\_\-option\-\_\-double@{add\-\_\-option\-\_\-double}}
 \index{add\-\_\-option\-\_\-double@{add\-\_\-option\-\_\-double}!Anyarg@{Anyarg}}
 \subsubsection[{add\-\_\-option\-\_\-double}]{\setlength{\rightskip}{0pt plus 5cm}bool Anyarg\-::add\-\_\-option\-\_\-double (
@@ -194,6 +277,24 @@ opt.add_option_str("output", 'o', "na", "=FILE Output file");
 \item[{const char $\ast$}]{desc}
 \end{DoxyParamCaption}
 )}}\label{class_anyarg_a616fa92a586900e277bfc6222428f544}
+
+
+Add a taking-\/value option to a program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Long name of a flag. Using hypen to connect multiple words, such as \char`\"{}buffer-\/size\char`\"{}. \\
+\hline
+{\em letter} & Single-\/letter label of a flag, such as 'i'. Set letter to 0 if you do not need a short label. \\
+\hline
+{\em v0} & The default value of this option. \\
+\hline
+{\em desc} & Description of a flag, which will be used to generate usage. Set {\ttfamily desc} as \char`\"{}\char`\"{} if nothing to say. If description starts with an {\ttfamily =} (like\-: \char`\"{}=\-F\-I\-L\-E Name of output file\char`\"{}), the word followed will be treated as a M\-E\-T\-A word, which will be used in the generation of option usage, e.\-g.\-: \char`\"{}-\/f F\-I\-L\-E, \&ndash;filename=\-F\-I\-L\-E\char`\"{}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if success, {\ttfamily false} if the flag has been defined. 
+\end{DoxyReturn}
 \begin{Desc}
 \item[Examples\-: ]\par
 \hyperlink{_2_users_2liqb_2dev_2anyarg_2anyarg_8h-example}{/\-Users/liqb/dev/anyarg/anyarg.\-h}.\end{Desc}
@@ -207,6 +308,24 @@ opt.add_option_str("output", 'o', "na", "=FILE Output file");
 \item[{const char $\ast$}]{desc}
 \end{DoxyParamCaption}
 )}}\label{class_anyarg_ad5f726956b9525fce547f359bbdcddfc}
+
+
+Add a taking-\/value option to a program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Long name of a flag. Using hypen to connect multiple words, such as \char`\"{}buffer-\/size\char`\"{}. \\
+\hline
+{\em letter} & Single-\/letter label of a flag, such as 'i'. Set letter to 0 if you do not need a short label. \\
+\hline
+{\em v0} & The default value of this option. \\
+\hline
+{\em desc} & Description of a flag, which will be used to generate usage. Set {\ttfamily desc} as \char`\"{}\char`\"{} if nothing to say. If description starts with an {\ttfamily =} (like\-: \char`\"{}=\-F\-I\-L\-E Name of output file\char`\"{}), the word followed will be treated as a M\-E\-T\-A word, which will be used in the generation of option usage, e.\-g.\-: \char`\"{}-\/f F\-I\-L\-E, \&ndash;filename=\-F\-I\-L\-E\char`\"{}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if success, {\ttfamily false} if the flag has been defined. 
+\end{DoxyReturn}
 \hypertarget{class_anyarg_ab38a13c5d241224bb14d8e474bbe70de}{\index{Anyarg@{Anyarg}!parse\-\_\-argv@{parse\-\_\-argv}}
 \index{parse\-\_\-argv@{parse\-\_\-argv}!Anyarg@{Anyarg}}
 \subsubsection[{parse\-\_\-argv}]{\setlength{\rightskip}{0pt plus 5cm}bool Anyarg\-::parse\-\_\-argv (
@@ -269,6 +388,20 @@ Check whether a flag can be found in the command line.
 \item[{char}]{letter}
 \end{DoxyParamCaption}
 ) const}}\label{class_anyarg_a8663ada26b0add34878d0929dc436fc5}
+
+
+Check whether a flag can be found in the command line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The same name used in \hyperlink{class_anyarg_a15625aae27eac8deb3b8b6fd1adf70c4}{add\-\_\-flag()}. \\
+\hline
+{\em letter} & Single-\/letter label of a flag. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a flag is found, {\ttfamily false} if not. 
+\end{DoxyReturn}
 \hypertarget{class_anyarg_a9788b24659c4b7ab69cfb8b1f55f1c15}{\index{Anyarg@{Anyarg}!get\-\_\-value\-\_\-str@{get\-\_\-value\-\_\-str}}
 \index{get\-\_\-value\-\_\-str@{get\-\_\-value\-\_\-str}!Anyarg@{Anyarg}}
 \subsubsection[{get\-\_\-value\-\_\-str}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Anyarg\-::get\-\_\-value\-\_\-str (
@@ -288,17 +421,29 @@ Get the value of an option.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-The value of an option. If the value is not assigned in command line, the default value will be returned.
+The value of an option. If the value is not assigned in command line, the default value will be returned. 
 \end{DoxyReturn}
-Examples\-: \begin{DoxyVerb}int buffer_size = opt.get_value_int("buffer-size");
-\end{DoxyVerb}
- \hypertarget{class_anyarg_a8b5d891a9e146c17cd4d8038c5265fcc}{\index{Anyarg@{Anyarg}!get\-\_\-value\-\_\-str@{get\-\_\-value\-\_\-str}}
+\hypertarget{class_anyarg_a8b5d891a9e146c17cd4d8038c5265fcc}{\index{Anyarg@{Anyarg}!get\-\_\-value\-\_\-str@{get\-\_\-value\-\_\-str}}
 \index{get\-\_\-value\-\_\-str@{get\-\_\-value\-\_\-str}!Anyarg@{Anyarg}}
 \subsubsection[{get\-\_\-value\-\_\-str}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Anyarg\-::get\-\_\-value\-\_\-str (
 \begin{DoxyParamCaption}
 \item[{char}]{letter}
 \end{DoxyParamCaption}
 ) const}}\label{class_anyarg_a8b5d891a9e146c17cd4d8038c5265fcc}
+
+
+Get the value of an option. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The same name used in add\-\_\-option\-\_\-xxx(). \\
+\hline
+{\em letter} & Single-\/letter label of a flag, such as 'i'. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of an option. If the value is not assigned in command line, the default value will be returned. 
+\end{DoxyReturn}
 \hypertarget{class_anyarg_ae254a7571efbf058ad98fcd00a176470}{\index{Anyarg@{Anyarg}!get\-\_\-value\-\_\-int@{get\-\_\-value\-\_\-int}}
 \index{get\-\_\-value\-\_\-int@{get\-\_\-value\-\_\-int}!Anyarg@{Anyarg}}
 \subsubsection[{get\-\_\-value\-\_\-int}]{\setlength{\rightskip}{0pt plus 5cm}int Anyarg\-::get\-\_\-value\-\_\-int (
@@ -306,6 +451,20 @@ Examples\-: \begin{DoxyVerb}int buffer_size = opt.get_value_int("buffer-size");
 \item[{const char $\ast$}]{name}
 \end{DoxyParamCaption}
 ) const}}\label{class_anyarg_ae254a7571efbf058ad98fcd00a176470}
+
+
+Get the value of an option. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The same name used in add\-\_\-option\-\_\-xxx(). \\
+\hline
+{\em letter} & Single-\/letter label of a flag, such as 'i'. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of an option. If the value is not assigned in command line, the default value will be returned. 
+\end{DoxyReturn}
 \begin{Desc}
 \item[Examples\-: ]\par
 \hyperlink{_2_users_2liqb_2dev_2anyarg_2anyarg_8h-example}{/\-Users/liqb/dev/anyarg/anyarg.\-h}.\end{Desc}
@@ -316,6 +475,20 @@ Examples\-: \begin{DoxyVerb}int buffer_size = opt.get_value_int("buffer-size");
 \item[{char}]{letter}
 \end{DoxyParamCaption}
 ) const}}\label{class_anyarg_a2c45edbcd6de87992c227c3994eb7e72}
+
+
+Get the value of an option. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The same name used in add\-\_\-option\-\_\-xxx(). \\
+\hline
+{\em letter} & Single-\/letter label of a flag, such as 'i'. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of an option. If the value is not assigned in command line, the default value will be returned. 
+\end{DoxyReturn}
 \hypertarget{class_anyarg_a8d46bd713bb7bc5bd303e23afd5609d1}{\index{Anyarg@{Anyarg}!get\-\_\-value\-\_\-double@{get\-\_\-value\-\_\-double}}
 \index{get\-\_\-value\-\_\-double@{get\-\_\-value\-\_\-double}!Anyarg@{Anyarg}}
 \subsubsection[{get\-\_\-value\-\_\-double}]{\setlength{\rightskip}{0pt plus 5cm}double Anyarg\-::get\-\_\-value\-\_\-double (
@@ -323,6 +496,20 @@ Examples\-: \begin{DoxyVerb}int buffer_size = opt.get_value_int("buffer-size");
 \item[{const char $\ast$}]{name}
 \end{DoxyParamCaption}
 ) const}}\label{class_anyarg_a8d46bd713bb7bc5bd303e23afd5609d1}
+
+
+Get the value of an option. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The same name used in add\-\_\-option\-\_\-xxx(). \\
+\hline
+{\em letter} & Single-\/letter label of a flag, such as 'i'. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of an option. If the value is not assigned in command line, the default value will be returned. 
+\end{DoxyReturn}
 \begin{Desc}
 \item[Examples\-: ]\par
 \hyperlink{_2_users_2liqb_2dev_2anyarg_2anyarg_8h-example}{/\-Users/liqb/dev/anyarg/anyarg.\-h}.\end{Desc}
@@ -333,6 +520,20 @@ Examples\-: \begin{DoxyVerb}int buffer_size = opt.get_value_int("buffer-size");
 \item[{char}]{letter}
 \end{DoxyParamCaption}
 ) const}}\label{class_anyarg_ad607e8d76b475ff3c5a9ccb4032258d7}
+
+
+Get the value of an option. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The same name used in add\-\_\-option\-\_\-xxx(). \\
+\hline
+{\em letter} & Single-\/letter label of a flag, such as 'i'. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of an option. If the value is not assigned in command line, the default value will be returned. 
+\end{DoxyReturn}
 \hypertarget{class_anyarg_a3cffbadc85f2fd4086e9a91ac1c5d666}{\index{Anyarg@{Anyarg}!get\-\_\-argc@{get\-\_\-argc}}
 \index{get\-\_\-argc@{get\-\_\-argc}!Anyarg@{Anyarg}}
 \subsubsection[{get\-\_\-argc}]{\setlength{\rightskip}{0pt plus 5cm}int Anyarg\-::get\-\_\-argc (

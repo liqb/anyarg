@@ -100,6 +100,7 @@ class Anyarg
 	/// Construct a Anyarg object.
 	Anyarg();
 
+	//@{
 	/**
 	Add a boolean flag to a program.
 	@param name   Long name of a flag. Using hypen to connect multiple words, such as "buffer-size".
@@ -107,33 +108,21 @@ class Anyarg
 	@param desc   Description of a flag, which will be used to generate usage. Set desc as "" if nothing to say.
 	@return       \c true if success, \c false if the flag has been defined.
 	@note The default value of flag is \c false.
-	
-	Examples:
-	\verbatim
-	opt.add_flag("help", 'h', "Display help information.");
-	opt.add_flag('v', "Open the verbose mode.");
-	\endverbatim
-	opt is a Anyarg object.
 	*/
 	bool add_flag(const char *name, char letter, const char *desc);
 	bool add_flag(char letter, const char *desc);
+	//@}
 
-
+	//@{
 	/**
 	Add a taking-value option to a program.
 	@param name   Long name of a flag. Using hypen to connect multiple words, such as "buffer-size".
 	@param letter Single-letter label of a flag, such as 'i'. Set letter to 0 if you do not need a short label.
 	@param v0     The default value of this option.
 	@param desc   Description of a flag, which will be used to generate usage. Set \c desc as "" if nothing to say.
-	              If description starts with an \c = (like: "=FILE Name of output file"), the first word is treated as
-	              a META word in the generation of option usage, e.g.: "-f FILE, --filename=FILE".
+	              If description starts with an \c = (like: "=FILE Name of output file"), the word followed will be treated as
+	              a META word, which will be used in the generation of option usage, e.g.: "-f FILE, --filename=FILE".
 	@return       \c true if success, \c false if the flag has been defined.
-	
-	Examples:
-	\verbatim
-	opt.add_option_int("buffer-size", 0, 100, "=SIZE Buffer size, default=100");
-	opt.add_option_str("output", 'o', "na", "=FILE Output file");
-	\endverbatim
 	*/
 	// Add an option with a string value
 	bool add_option_str(const char *name, char letter, const char *v0, const char *desc);
@@ -146,8 +135,8 @@ class Anyarg
 	// Add an option with an double value
 	bool add_option_double(char letter, double v0, const char *desc);
 	bool add_option_double(const char *name, char letter, double v0, const char *desc);
-
-
+	//@}
+	
 	/**
 	Parse command line arguments.
 	@pre         Flags and options have to be defined by add_flag() and add_option_xxx() before the parsing of command line.
@@ -159,6 +148,7 @@ class Anyarg
 	bool parse_argv(int argc, char **argv);
 
 	
+	//@{
 	/**
 	Check whether a flag can be found in the command line.
 	@param name   The same name used in add_flag().
@@ -167,18 +157,14 @@ class Anyarg
 	*/
 	bool found_flag(const char *name) const;
 	bool found_flag(char letter) const;
-
+	//@}
 	
+	//@{
 	/**
 	Get the value of an option.
 	@param name   The same name used in add_option_xxx().
 	@param letter Single-letter label of a flag, such as 'i'.
 	@return       The value of an option. If the value is not assigned in command line, the default value will be returned.
-	
-	Examples:
-	\verbatim
-	int buffer_size = opt.get_value_int("buffer-size");
-	\endverbatim
 	*/
 	// Get the value of an option with string values
 	const char *get_value_str(const char *name) const;
@@ -191,14 +177,13 @@ class Anyarg
 	// Get the value of an option with double values
 	double get_value_double(const char *name) const;
 	double get_value_double(char letter) const;
-
+	//@}
 
 	/**
 	Get the number of non-option arguments.
 	@return The count of non-option arguments.
 	*/
 	int get_argc() const;
-
 
 	/**
 	Get a non-option argument by index
@@ -207,13 +192,11 @@ class Anyarg
 	*/
 	const char *get_arg(int i) const;
 
-
 	/**
 	Generate well-formatted usage information for options defined for the program.
 	@return Usage information as a c-string.
 	*/
 	const char *auto_usage();
-
 
   private:
 	string prog_name_;  // name of the program
