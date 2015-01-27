@@ -90,7 +90,7 @@ http://www.gnu.org/prep/standards/html_node/Command_002dLine-Interfaces.html
 ### Authors
 Li Qibin liqb036@gamil.com
 
-Please contact if your have ideas to improve *anyarg* or report a bug.
+Please contact if you have ideas to improve *anyarg* or report a bug.
 
 
 ### License
