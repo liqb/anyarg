@@ -18,7 +18,7 @@ A single hypen - is parsed as an ordinary non-option arguments. It is usally use
 
 
 ### Code example
-```
+```c++
 #include <cstdio>
 #include "anyarg.h"
 
