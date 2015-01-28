@@ -15,14 +15,14 @@
 
     opt.\hyperlink{class_anyarg_ab38a13c5d241224bb14d8e474bbe70de}{parse\_argv}(argc, argv);
         
-    \textcolor{keywordflow}{if} (opt.\hyperlink{class_anyarg_a1305e8be180c7247cb9bdb0994b00597}{found\_flag}(\textcolor{stringliteral}{"help"})) \{
+    \textcolor{keywordflow}{if} (opt.\hyperlink{class_anyarg_a185d6b303115e47fac952d2499cdf548}{is\_true}(\textcolor{stringliteral}{"help"})) \{
         printf(\textcolor{stringliteral}{"%s\(\backslash\)n"}, opt.\hyperlink{class_anyarg_a1dd740c033f8ff539dc2c6f4001e11f9}{auto\_usage}());
         exit(0);
     \}
     
-    \textcolor{keywordflow}{if} (opt.\hyperlink{class_anyarg_a1305e8be180c7247cb9bdb0994b00597}{found\_flag}(\textcolor{stringliteral}{"all"}))
+    \textcolor{keywordflow}{if} (opt.\hyperlink{class_anyarg_a185d6b303115e47fac952d2499cdf548}{is\_true}(\textcolor{stringliteral}{"all"}))
         printf(\textcolor{stringliteral}{"option --all is set in the command line\(\backslash\)n"});
-    \textcolor{keywordflow}{if} (opt.\hyperlink{class_anyarg_a1305e8be180c7247cb9bdb0994b00597}{found\_flag}(\textcolor{charliteral}{'v'}))
+    \textcolor{keywordflow}{if} (opt.\hyperlink{class_anyarg_a185d6b303115e47fac952d2499cdf548}{is\_true}(\textcolor{charliteral}{'v'}))
         printf(\textcolor{stringliteral}{"verbose mode is opened\(\backslash\)n"});
     printf(\textcolor{stringliteral}{"The value of option -b is %d\(\backslash\)n"}, opt.\hyperlink{class_anyarg_ae254a7571efbf058ad98fcd00a176470}{get\_value\_int}(\textcolor{stringliteral}{"buffer-size"}));
     printf(\textcolor{stringliteral}{"The value of option --min is %f\(\backslash\)n"}, opt.\hyperlink{class_anyarg_a8d46bd713bb7bc5bd303e23afd5609d1}{get\_value\_double}(\textcolor{stringliteral}{"min"}));

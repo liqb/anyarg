@@ -96,15 +96,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 opt.parse_argv(argc, argv);
 
 // generate formatted usage information for all options
-if (opt.found_flag("help")) {
+if (opt.is_true("help")) {
     printf("%s\n", opt.auto_usage());
     exit(0);
 }
 
 // access option values
-if (opt.found_flag("all"))
+if (opt.is_true("all"))
     printf("option --all is set in the command line\n");
-if (opt.found_flag('v'))
+if (opt.is_true('v'))
     printf("verbose mode is opened\n");
 printf("The value of option -b is %d\n", opt.get_value_int("buffer-size"));
 printf("The value of option --min is %f\n", opt.get_value_double("min"));
@@ -129,7 +129,7 @@ return 1;
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 27 2015 18:15:54 for anyarg by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 28 2015 16:10:25 for anyarg by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

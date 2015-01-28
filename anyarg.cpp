@@ -346,7 +346,7 @@ bool Anyarg::parse_argv(int argc, char **argv)
 }
 
 
-bool Anyarg::found_flag(const char *name) const
+bool Anyarg::is_true(const char *name) const
 {
 	int j = get_optind(name);
 
@@ -363,7 +363,7 @@ bool Anyarg::found_flag(const char *name) const
 }
 
 
-bool Anyarg::found_flag(char letter) const
+bool Anyarg::is_true(char letter) const
 {
 	int j = get_optind(letter);
 

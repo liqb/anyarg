@@ -2,9 +2,9 @@
 @file    anyarg.h
 @brief   A simple option parser for C++.
 @author  Li Qibin (liqb036@gmail.com)
-@version 0.11
+@version 0.12
 @bug     no bug found yet
-@date    2014/01/26
+@date    2014/01/28
 
 Anyarg supports both single letter-options (like: -i) and long options (like: --help).
 
@@ -146,25 +146,26 @@ class Anyarg
 	@note        The frist elements of \c argv MUST be the name of the program.
 	*/
 	bool parse_argv(int argc, char **argv);
-
 	
 	//@{
 	/**
-	Check whether a flag can be found in the command line.
+	Check whether a flag is set to true in the command line.
 	@param name   The same name used in add_flag().
 	@param letter Single-letter label of a flag.
-	@return       \c true if a flag is found, \c false if not.
+	@return       \c true if a flag is set in command line, \c false if not.
 	*/
-	bool found_flag(const char *name) const;
-	bool found_flag(char letter) const;
+	bool is_true(const char *name) const;
+	bool is_true(char letter) const;
 	//@}
 	
 	//@{
 	/**
-	Get the value of an option.
+	Get option value.
 	@param name   The same name used in add_option_xxx().
 	@param letter Single-letter label of a flag, such as 'i'.
 	@return       The value of an option. If the value is not assigned in command line, the default value will be returned.
+	@note         get_value functions should match with add_option functions. Use get_value_str(), get_value_int(),
+	              get_value_double() to get the value of an option whose value is of type string, int and double, respectively.	
 	*/
 	// Get the value of an option with string values
 	const char *get_value_str(const char *name) const;
@@ -173,7 +174,7 @@ class Anyarg
 	// Get the value of an option with integer values
 	int get_value_int(const char *name) const;
 	int get_value_int(char letter) const;
-	
+
 	// Get the value of an option with double values
 	double get_value_double(const char *name) const;
 	double get_value_double(char letter) const;
@@ -237,14 +238,14 @@ int main(int argc, char **argv)
 
 	opt.parse_argv(argc, argv);
 		
-	if (opt.found_flag("help")) {
+	if (opt.is_true("help")) {
 		printf("%s\n", opt.auto_usage());
 		exit(0);
 	}
 	
-	if (opt.found_flag("all"))
+	if (opt.is_true("all"))
 		printf("option --all is set in the command line\n");
-	if (opt.found_flag('v'))
+	if (opt.is_true('v'))
 		printf("verbose mode is opened\n");
 	printf("The value of option -b is %d\n", opt.get_value_int("buffer-size"));
 	printf("The value of option --min is %f\n", opt.get_value_double("min"));

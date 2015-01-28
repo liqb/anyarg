@@ -1,7 +1,7 @@
 Anyarg - a simple option parser for C++ 
 =======================================
 
-Current version: 0.11
+Current version: 0.12
 
 ### Summary
 *Anyarg* supports both single letter options (like: -i) and long options (like: --help). The parsing of single letter options follows POSIX conventions and the parsing of long options follows GNU conventions (See URLs).
@@ -40,15 +40,15 @@ int main(int argc, char **argv)
 	opt.parse_argv(argc, argv);
 
 	// generate formatted usage information for all options
-	if (opt.found_flag("help")) {
+	if (opt.is_true("help")) {
 		printf("%s\n", opt.auto_usage());
 		exit(0);
 	}
 	
 	// access option values
-	if (opt.found_flag("all"))
+	if (opt.is_true("all"))
 		printf("option --all is set in the command line\n");
-	if (opt.found_flag('v'))
+	if (opt.is_true('v'))
 		printf("verbose mode is opened\n");
 	printf("The value of option -b is %d\n", opt.get_value_int("buffer-size"));
 	printf("The value of option --min is %f\n", opt.get_value_double("min"));
